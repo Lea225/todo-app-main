@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+  <script src="main.js" defer></script> 
+</head>
+<body>
+
+<header>
+  <div class="theme">
+    <h1>Todo</h1>
+    <img id="icon-sun" src="images/icon-sun.svg" alt="icon-sun">
+    <img id="icon-moon" src="images/icon-moon.svg" alt="icon-moon">
+  </div>
+  <div class="input-div">
+      <input type="text" placeholder="Create a new todo...">
+  </div>
+</header>
+
+  <section>
+
+    <div class="container">
+      <main>
+        <div class="checkbox-container">
+          <label>
+            <input type="checkbox" name="theme" id="dark-theme">
+            <div class="checkmark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+                <path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/>
+              </svg>
+            </div>
+            <p class="text-barré">Complete online JavaScript course</p>
+            <div class="delete-icon">
+              <img id="icon-cross" src="images/icon-cross.svg" alt="icon-cross">
+            </div>
+          </label>
+        </div>
+      </main>
+  
+      <footer>
+        <p><span class="nbrItem"></span>items left</p>
+        <nav>
+          <a class="all" href="#">All</a>
+          <a class="active" href="#">Active</a>
+          <a class="completed" href="#">Completed</a> 
+        </nav>
+        <a class="clear-completed" href="#">Clear Completed</a>
+      </footer>
+    </div>
+    <div class="mobile-menu">
+      <a class="all" href="#">All</a>
+      <a class="active" href="#">Active</a>
+      <a class="completed" href="#">Completed</a>
+    </div>
+  
+    <div class="drag">
+      <a href="#">Drag and drop to reorder list</a>
+    </div>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Léa CHIDAS</a>.
+    </div>
+  </section> 
+
+
+</body>
+</html>

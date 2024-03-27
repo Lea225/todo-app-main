@@ -1,0 +1,261 @@
+.attribution { font-size: 11px; text-align: center; margin-bottom: 5%; margin-bottom: 5%;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Light Theme */
+:root {
+    --background-color: hsl(0, 0%, 98%);
+    --input-background: hsl(0, 0%, 100%);
+    --list-background: hsl(233, 11%, 84%);
+    --text-color: hsl(235, 19%, 35%);
+    --completed-text-color: hsl(236, 9%, 61%);
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+/* Dark Theme */
+:root[data-theme="dark"] {
+    --background-color: hsl(235, 21%, 11%);
+    --input-background: hsl(235, 24%, 19%);
+    --list-background: hsl(234, 11%, 52%);
+    --text-color:  hsl(234, 39%, 85%);
+    --completed-text-color: hsl(233, 14%, 35%);
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+*{
+  font-family: 'Josefin Sans',sans-serif;
+}
+body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: var(--text-color);
+  background-position: top;
+  background-size: 100% cover;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  background-image: url('images/bg-desktop-dark.jpg');
+}
+header{
+  width: 35%;
+  height: 50vh;
+  margin: 0 auto;
+  margin-top: 8%;
+  text-align: center;   
+}
+.theme{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 98%);
+}
+#icon-sun,#icon-moon{
+  cursor: pointer;
+}
+#icon-moon,.mobile-menu{
+  display: none;
+}
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+p{
+  color: var(--text-color);
+}
+.text-barré{
+  text-decoration: line-through;
+  color: var(--completed-text-color);
+} 
+main p{
+  line-height: 1.5;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center; 
+}
+section{ 
+  top: 115%;
+  left: 50%;
+  width: 35%;
+  margin-top: 3rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.container{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--input-background);
+  box-shadow: 6px 6px 8px hsl(235, 21%, 11%, 0.2);
+}
+main div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-width: 100%;
+  justify-content: flex-start;
+  border-bottom: 1px solid hsl(234, 11%, 52%, 0.2);
+}
+.input-div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+input[type="text"] {
+  background-color: var(--input-background);
+  color: var(--text-color);
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+footer{
+  display: flex;
+  font-size: 0.9em;
+  align-items: center;
+  justify-content: space-between;
+}
+footer a, footer p{
+  color: var(--completed-text-color);
+}
+footer nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer nav a{
+  padding-right: 10px;
+}
+.all{
+  color: var(--bright-blue);
+}
+span{
+  margin-right: 5px;
+}
+.completed{
+  color: var(--completed-text-color);
+}
+footer a:hover, .mobile-menu a:hover{
+  color: var(--text-color);
+}
+.drag{
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative; 
+}
+.checkbox-container label p {
+  margin-left: 10px;
+}
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+.checkmark {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  position: relative;
+  border: 1px solid var(--completed-text-color);
+  transition: background 0.3s ease-in-out;
+}
+.checkmark:hover{
+  border-color: var(--bright-blue);
+}
+.checkmark svg {
+  fill: var(--background-color);
+  display: none;
+}
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  background: var(--check-background);
+}
+.checkbox-container input[type="checkbox"]:checked + .checkmark svg {
+  display: block;
+}
+.checkbox-container label:hover .checkmark {
+  background: var(--dark-grayish-blue);
+}
+.checkbox-container label:hover .checkmark svg {
+  display: none;
+}
+.delete-icon {
+  display: none;
+  margin-left: auto; 
+  cursor: pointer;
+  border: none;
+  align-self: flex-end;
+  position: absolute; 
+  left: 125%; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+.delete-icon img {
+  width: 15px;
+  height: 15px;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+.checkbox-container label:hover .delete-icon img {
+  opacity: 1; 
+}
+.checkbox-container:hover .delete-icon {
+  display: flex;
+}
+.delete-icon img:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: url('images/bg-mobile-dark.jpg'); 
+  }
+  header{
+    width: 85%;
+  }
+  section{
+    width: 85%;
+    top: 140%;
+  }
+  nav{
+    display: none;
+  }
+  .mobile-menu{
+    width: 90%;
+    display: flex;
+    padding: 20px;
+    margin: 5% auto;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--input-background);
+    box-shadow: 6px 6px 8px hsl(235, 21%, 11%, 0.2);
+  }
+  .mobile-menu a{
+    padding-right: 25px;
+  }
+  .active,.completed{
+    color: var(--completed-text-color);
+  }
+}  
