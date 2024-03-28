@@ -65,6 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const p = document.createElement('p');
     p.textContent = todoText;
 
+    // Ajout des styles pour les todos cochés
+    inputCheckbox.addEventListener('change', function() {
+      if(this.checked) {
+        p.style.textDecoration = 'line-through';
+        p.style.color = 'var(--completed-text-color)';
+      } else {
+        p.style.textDecoration = 'none';
+        p.style.color = 'var(--text-color)';
+      }
+    });
+
     const deleteIcon = document.createElement('div');
     deleteIcon.className = 'delete-icon';
     const img = document.createElement('img');
